@@ -8,3 +8,6 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
+images:
+- name: phone-to-sms
+  digest: sha256:something

@@ -49,6 +49,6 @@ If you want to learn more about building native executables, please consult http
 
 1. Create namespace `kubectl apply -f ./kube/base/namespace.yaml`
 2. Create `./kube/overlays/prod/secret_keys.yaml` with the keys to match the env vars in `./kube/base/deployment.yaml`
-3. Add `image` info to `./kube/overlays/prod/kustomization.yaml`
+3. Add `image` info to `./kube/base/kustomization.yaml`
 4. Update `./kube/base/ingress.yaml` to use the right alb arn and the right hostname and tls hostname
 5. `kubectl apply -k ./kube/overlays/prod` to deploy application

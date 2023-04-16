@@ -5,6 +5,3 @@ bases:
 patches:
   - resource_limits.yaml
   - secret_keys.yaml
-images:
-- name: phone-to-sms
-  digest: sha256:something
