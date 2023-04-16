@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phone-to-sms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: phone-to-sms
+      app: phone-to-sms
+  template:
+    spec:
+      containers:
+      - name: phone-to-sms
+        image: phone-to-sms@sha256:something
+        imagePullPolicy: Always
+        env:
+          - name: TWILIO_ACCOUNT_SID
+            value: REPLACE_ME
+          - name: TWILIO_AUTH_TOKEN
+            value: REPLACE_ME
+          - name: VOICE_MESSAGE
+            value: "Thanks for calling!  We are texting you now."
+          - name: TEXT_MESSAGE
+            value: "Hi!  Text us here instead."
+        ports:
+        - containerPort: 8080
