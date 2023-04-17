@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: phone-to-sms
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app.kubernetes.io/name: phone-to-sms
     app: phone-to-sms
