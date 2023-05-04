@@ -24,7 +24,7 @@ public class PhoneCallResourceTest {
           .when().post("/")
           .then()
              .statusCode(200)
-             .body(is("<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Say voice=\"alice\"/></Response>"));
+             .body(is("<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Say voice=\"alice\">Hi! Thanks for calling, but we prefer text. We are texting you now.</Say></Response>"));
     }
     
     @Test
@@ -34,7 +34,7 @@ public class PhoneCallResourceTest {
                .when().post("/")
                .then()
                .statusCode(200)
-               .body(is("<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Say voice=\"alice\"/></Response>"));
+               .body(is("<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Say voice=\"alice\">Hi! Thanks for calling, but we prefer text. We are texting you now.</Say></Response>"));
     }
 
 }

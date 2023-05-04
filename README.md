@@ -1,6 +1,7 @@
 # Phone to SMS
 
 This project answers a phone call with custom text and then sends them a follow up SMS custom message.
+Update the values `replace_me` in `application.properties`.
 
 ## Running the application in dev mode
 
