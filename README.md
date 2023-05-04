@@ -1,7 +1,8 @@
 # Phone to SMS
 
 This project answers a phone call with custom text and then sends them a follow up SMS custom message.
-Update the values `replace_me` in `application.properties`.
+Update the values for twilio sid and twilio auth token or set environment variables that will be replaced
+in `application.properties`.
 
 ## Running the application in dev mode
 
